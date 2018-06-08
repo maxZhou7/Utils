@@ -9,7 +9,7 @@ object LogUtil {
 
     fun e(Tag: String, info: String) {
         if (Utils.isDebug()) {
-            val infos = StringBuffer()
+            val infos = StringBuilder()
             infos.append(getFileLineMethod())
             infos.append(info)
             Log.e(Tag, infos.toString())
@@ -18,7 +18,7 @@ object LogUtil {
 
     fun d(Tag: String, info: String) {
         if (Utils.isDebug()) {
-            val infos = StringBuffer()
+            val infos = StringBuilder()
             infos.append(getFileLineMethod())
             infos.append(info)
             Log.d(Tag, infos.toString())
@@ -27,7 +27,7 @@ object LogUtil {
 
     fun i(Tag: String, info: String) {
         if (Utils.isDebug()) {
-            val infos = StringBuffer()
+            val infos = StringBuilder()
             infos.append(getFileLineMethod())
             infos.append(info)
             Log.i(Tag, infos.toString())
@@ -36,7 +36,7 @@ object LogUtil {
 
     fun w(Tag: String, info: String) {
         if (Utils.isDebug()) {
-            val infos = StringBuffer()
+            val infos = StringBuilder()
             infos.append(getFileLineMethod())
             infos.append(info)
             Log.w(Tag, infos.toString())
@@ -45,7 +45,7 @@ object LogUtil {
 
     fun v(Tag: String, info: String) {
         if (Utils.isDebug()) {
-            val infos = StringBuffer()
+            val infos = StringBuilder()
             infos.append(getFileLineMethod())
             infos.append(info)
             Log.v(Tag, infos.toString())
@@ -55,7 +55,7 @@ object LogUtil {
     private fun getFileLineMethod(): String {
         val traces = Throwable().stackTrace
         val traceElement = traces[2]
-        val toStringBuffer = StringBuffer("[")
+        val toStringBuffer = StringBuilder("[")
                 .append(traceElement.fileName).append(" | ")
                 .append(traceElement.lineNumber).append(" | ")
                 .append(traceElement.methodName).append("()").append("]")
