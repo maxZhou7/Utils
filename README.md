@@ -21,12 +21,15 @@ Step 2. Add the dependency
 	}
 
 Invoke:<br>
+` ``
 	使用时需要自己项目的application继承UtilApllicaion
+` ``
 kotlin:<br>
+` ``
 	//用于是否打印log。同时可扩展更多用处
 	Utils.setDebug(true)
-        //使用时需要继承UtilApplication或在manifest里面的application的name标为UtilApplication
-        MyApplication.getInstatnce()
+	//使用时需要继承UtilApplication或在manifest里面的application的name标为UtilApplication
+	MyApplication.getInstatnce()
         //Encrypt中包含了几种常用的加密方法 md5 sha1 sha512 sha256
         //LogUtil用于打印各种类型的日志
         LogUtil.e(tag, Encrypt.md5("test"))
@@ -60,7 +63,7 @@ kotlin:<br>
                 LogUtil.d(tag, "btn2 double click")
             }
         })
-
+` ``
 java:<br>
 	LogUtil.INSTANCE.e("test", "test value");
 	其他的类似调用方式
