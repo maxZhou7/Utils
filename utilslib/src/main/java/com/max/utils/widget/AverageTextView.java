@@ -15,7 +15,7 @@ import com.max.utils.common.ResourceUtil;
 
 
 /**
- * Created by max on 2018/3/16.
+ * Created by max on 2018/6/11
  */
 
 public class AverageTextView extends View {
