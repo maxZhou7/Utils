@@ -68,6 +68,12 @@ kotlin:<br>
                 LogUtil.d(tag, "btn2 double click")
             }
         })
+	
+	
+	<com.max.utils.widget.AverageTextView
+        	android:layout_width="120dp"
+        	android:layout_height="wrap_content"
+        	app:av_text="就是要测试一下" />
 
 java:<br>
 
@@ -80,4 +86,7 @@ double click,logUtil,sharepreference
 
 #### v0.0.2
 add ResourceUtil,ScreenDisplay,Encrypt
+
+#### v0.0.3
+增加AverageTextView，主要用于固定长度下均分显示文字
 
