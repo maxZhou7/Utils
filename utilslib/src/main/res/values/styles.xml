@@ -1,0 +1,9 @@
+<resources>
+
+    <declare-styleable name="average_text">
+        <attr name="av_textSize" format="dimension" />
+        <attr name="av_textColor" format="color" />
+        <attr name="av_text" format="string" />
+    </declare-styleable>
+
+</resources>
