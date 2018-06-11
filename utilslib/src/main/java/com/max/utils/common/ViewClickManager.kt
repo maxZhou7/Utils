@@ -1,4 +1,4 @@
-package com.max.utils
+package com.max.utils.common
 
 import android.os.Handler
 import android.os.Message

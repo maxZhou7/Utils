@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.max.utils.common.SPManager;
+
 /**
  * Created by max on 2017/11/23.
  */

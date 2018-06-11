@@ -1,4 +1,4 @@
-package com.max.utils
+package com.max.utils.common
 
 import android.app.Activity
 import android.content.Context

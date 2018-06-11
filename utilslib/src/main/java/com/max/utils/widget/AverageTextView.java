@@ -9,9 +9,9 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.max.utils.LogUtil;
+import com.max.utils.common.LogUtil;
 import com.max.utils.R;
-import com.max.utils.ResourceUtil;
+import com.max.utils.common.ResourceUtil;
 
 
 /**

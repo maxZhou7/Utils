@@ -1,4 +1,4 @@
-package com.max.utils
+package com.max.utils.common
 
 import android.graphics.drawable.Drawable
 import java.util.*

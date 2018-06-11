@@ -1,4 +1,4 @@
-package com.max.utils
+package com.max.utils.common
 
 import java.security.MessageDigest
 
