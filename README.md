@@ -23,12 +23,11 @@ Step 2. Add the dependency
 Invoke:<br>
 
 	使用时需要自己项目的application继承UtilApllicaion，如果项目是kotlin，需要在自己的application里面加上
-
 	companion object {
 		fun getInstatnce() = UtilApplication.getInstatnce()
 	}
-	
-	这样便可以直接通过自己的application.getInstatnce()获取引用	
+	这样便可以直接通过自己的application.getInstatnce()获取引用
+	java里面可以在其他类里面调用到自己application的父类的getinstance()方法，所以不需添加
 
 kotlin:<br>
 
