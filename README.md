@@ -22,7 +22,13 @@ Step 2. Add the dependency
 
 Invoke:<br>
 
-	使用时需要自己项目的application继承UtilApllicaion
+	使用时需要自己项目的application继承UtilApllicaion，如果项目是kotlin，需要在自己的application里面加上
+
+	companion object {
+		fun getInstatnce() = UtilApplication.getInstatnce()
+	}
+	
+	这样便可以直接通过自己的application.getInstatnce()获取引用	
 
 kotlin:<br>
 
@@ -30,16 +36,16 @@ kotlin:<br>
 	Utils.setDebug(true)
 	//使用时需要继承UtilApplication或在manifest里面的application的name标为UtilApplication
 	MyApplication.getInstatnce()
-        //Encrypt中包含了几种常用的加密方法 md5 sha1 sha512 sha256
-        //LogUtil用于打印各种类型的日志
-        LogUtil.e(tag, Encrypt.md5("test"))
-        //ResourceUtil获取资源文件里面的内容
-        ResourceUtil.getString(R.string.app_name)
-        //ScreenDisplay用于单位转换 获取屏幕尺寸
-        ScreenDisplay.dp2px(10f)
-        //sharepreference的使用通过SPManager
-        val temp by SPManager(this@MainActivity, "key", "default")
-        LogUtil.e(tag, temp)
+	//Encrypt中包含了几种常用的加密方法 md5 sha1 sha512 sha256
+	//LogUtil用于打印各种类型的日志
+	LogUtil.e(tag, Encrypt.md5("test"))
+	//ResourceUtil获取资源文件里面的内容
+	ResourceUtil.getString(R.string.app_name)
+	//ScreenDisplay用于单位转换 获取屏幕尺寸
+	ScreenDisplay.dp2px(10f)
+	//sharepreference的使用通过SPManager
+	val temp by SPManager(this@MainActivity, "key", "default")
+	LogUtil.e(tag, temp)
 	LogUtil.setDebug(true)
  	viewClickManager.setClickLister(btn1, object : ViewClickManager.OnClickListener {
             override fun onSingleClick() {
