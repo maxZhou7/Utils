@@ -20,8 +20,9 @@ import com.max.utils.common.ResourceUtil;
 
 public class AverageTextView extends View {
 
+    private static final String TAG = AverageTextView.class.getSimpleName();
     //内容之外的高度
-    private static int VIEW_HEIGHT = ResourceUtil.INSTANCE.getDimensionPixelOffset(R.dimen.dp6);
+    private static int VIEW_HEIGHT = ResourceUtil.INSTANCE.getDimensionPixelOffset(R.dimen.dp3);
 
     private Paint mPaint;
     private int txtWidth, txtHeight;
@@ -69,7 +70,7 @@ public class AverageTextView extends View {
      *
      * @param dp
      */
-    public void setViewOutHeight(int dp) {
+    public void setPaddingTopAndBottom(int dp) {
         VIEW_HEIGHT = ResourceUtil.INSTANCE.getDimensionPixelOffset(dp);
         invalidate();
     }
@@ -97,7 +98,7 @@ public class AverageTextView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        setMeasuredDimension(widthMeasureSpec, VIEW_HEIGHT + txtHeight);
+        setMeasuredDimension(widthMeasureSpec, VIEW_HEIGHT * 2 + txtHeight);
     }
 
     @Override
@@ -113,12 +114,16 @@ public class AverageTextView extends View {
             length = mText.length();
         }
         if (width < txtWidth) {
-            LogUtil.INSTANCE.e("onDraw", "too many words");
-            return;//文字太多放不下
+            LogUtil.INSTANCE.e(TAG, "too many words");
+            return;//一个也放不下
         }
-        int drawBaseY = txtHeight + VIEW_HEIGHT / 2;
-        int div = (width - txtWidth) / (length - 1);
-        for (int i = 0; i < length; i++) {
+        if (length == 0) {
+            LogUtil.INSTANCE.e(TAG, "no word can be draw");
+            return;
+        }
+        int drawBaseY = txtHeight + VIEW_HEIGHT;
+        int div = length == 1 ? 0 : (width - txtWidth) / (length - 1);
+        for (int i = 0; i < length; i++) {//循环绘文字
             String temp = mText.substring(i, i + 1);
             String passString = mText.substring(0, i);
             Rect rect = new Rect();

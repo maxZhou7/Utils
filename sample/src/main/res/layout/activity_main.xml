@@ -22,7 +22,8 @@
         android:textAllCaps="false" />
 
     <com.max.utils.widget.AverageTextView
-        android:layout_width="120dp"
+        android:layout_width="20dp"
+        android:background="@color/colorPrimaryDark"
         android:layout_height="wrap_content"
         app:av_text="就是要测试一下" />
 
