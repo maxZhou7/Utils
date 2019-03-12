@@ -61,8 +61,10 @@ public class AverageTextView extends View {
 
         rAll = new Rect();
         mPaint.getTextBounds(mText, 0, mText.length(), rAll);
-        txtWidth = rAll.width();//文字宽
-        txtHeight = rAll.height();//文字高
+        //文字宽
+        txtWidth = rAll.width();
+        //文字高
+        txtHeight = rAll.height();
     }
 
     /**
@@ -123,7 +125,8 @@ public class AverageTextView extends View {
         }
         int drawBaseY = txtHeight + VIEW_HEIGHT;
         int div = length == 1 ? 0 : (width - txtWidth) / (length - 1);
-        for (int i = 0; i < length; i++) {//循环绘文字
+        for (int i = 0; i < length; i++) {
+            //循环绘文字
             String temp = mText.substring(i, i + 1);
             String passString = mText.substring(0, i);
             Rect rect = new Rect();
