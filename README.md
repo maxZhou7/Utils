@@ -69,6 +69,19 @@ kotlin:<br>
             }
         })
 	
+	myDialog?.setDialogTitle("测试标题")
+                        ?.setContent("这是一个很长的测试内容的条目，你说好不好呢？")
+                        ?.setLeftBtn("取消")
+                        ?.setRightBtn("确定")
+                        ?.setBtnClick(object : DialogView.BtnClickListener {
+                            override fun onLeftClick() {
+                            }
+
+                            override fun onRightClick() {
+                            }
+                        })
+                        ?.show()
+			
 	
 	<com.max.utils.widget.AverageTextView
         	android:layout_width="120dp"
@@ -89,4 +102,8 @@ add ResourceUtil,ScreenDisplay,Encrypt
 
 #### v0.0.3
 增加AverageTextView，主要用于固定长度下均分显示文字
+
+#### v0.0.4
+新增DialogView，一个比较常用的dialog，可以自定义title，content以及按钮数量和文字
+
 
