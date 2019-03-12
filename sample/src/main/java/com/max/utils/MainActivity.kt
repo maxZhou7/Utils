@@ -3,6 +3,7 @@ package com.max.utils
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.max.utils.common.*
+import com.max.utils.widget.DialogView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     private val viewClickManager = ViewClickManager()
 
     var value by SPManager(this@MainActivity, "key", "nothing")
+    var myDialog: DialogView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +56,25 @@ class MainActivity : AppCompatActivity() {
                 LogUtil.d(tag, "btn2 double click")
             }
         })
+
+        myDialog = DialogView(this)
+        showDialog.setOnClickListener { _ ->
+            run {
+                myDialog?.setDialogTitle("测试标题")
+                        ?.setContent("这是一个很长的测试内容的条目，你说好不好呢？")
+                        ?.setLeftBtn("取消")
+                        ?.setRightBtn("确定")
+                        ?.setBtnClick(object : DialogView.BtnClickListener {
+                            override fun onLeftClick() {
+                            }
+
+                            override fun onRightClick() {
+                            }
+                        })
+                        ?.show()
+                myDialog?.setCancelable(false)
+            }
+        }
     }
 
 }

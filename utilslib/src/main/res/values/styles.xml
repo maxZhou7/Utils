@@ -6,4 +6,17 @@
         <attr name="av_text" format="string" />
     </declare-styleable>
 
+    <style name="FullScreenDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <style name="scale">
+        <item name="android:windowEnterAnimation">@anim/scale_s_to_b</item>
+        <item name="android:windowExitAnimation">@anim/scale_b_to_s</item>
+    </style>
 </resources>

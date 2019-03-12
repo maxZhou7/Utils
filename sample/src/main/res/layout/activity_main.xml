@@ -20,6 +20,12 @@
         android:layout_height="wrap_content"
         android:text="Only another button"
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/showDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show dialog"
+        android:textAllCaps="false" />
 
     <com.max.utils.widget.AverageTextView
         android:layout_width="20dp"
