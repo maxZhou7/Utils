@@ -1,7 +1,7 @@
 package com.max.utils
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.max.utils.common.*
 import com.max.utils.widget.DialogView
 import kotlinx.android.synthetic.main.activity_main.*
