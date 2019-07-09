@@ -17,7 +17,7 @@ Step 1. Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.maxZhou7:Utils:0.0.4'
+	        implementation 'com.github.maxZhou7:Utils:0.0.5'
 	}
 
 Invoke:<br>
@@ -106,4 +106,6 @@ add ResourceUtil,ScreenDisplay,Encrypt
 #### v0.0.4
 新增DialogView，一个比较常用的dialog，可以自定义title，content以及按钮数量和文字
 
+#### v0.0.5
+新增对androidx的支持
 
